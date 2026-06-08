@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+
+    /* Fundo azul moderno */
+    background:
+        radial-gradient(circle at top left, #3b82f6 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #2563eb 0%, transparent 35%),
+        linear-gradient(135deg, #0f172a, #1e3a8a);
+
+    color:white;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Efeito de brilho no fundo */
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#3b82f6;
+    border-radius:50%;
+    filter:blur(180px);
+    top:-150px;
+    left:-150px;
+    opacity:.25;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#60a5fa;
+    border-radius:50%;
+    filter:blur(180px);
+    bottom:-150px;
+    right:-150px;
+    opacity:.25;
+}
+
+.container{
+    position:relative;
+    z-index:10;
+
+    width:100%;
+    max-width:550px;
+
+    padding:35px;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:24px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.35);
+
+    animation:fadeUp .6s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px;
+    font-size:2rem;
+}
+
+p{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:25px;
+}
+
+input,
+select{
+    width:100%;
+    padding:14px;
+    margin-top:8px;
+    margin-bottom:18px;
+
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.08);
+    color:white;
+
+    transition:.3s;
+}
+
+input:focus,
+select:focus{
+    box-shadow:0 0 0 3px rgba(59,130,246,.4);
+}
+
+button,
+input[type="submit"]{
+    width:100%;
+    padding:15px;
+
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(
+        135deg,
+        #3b82f6,
+        #2563eb
+    );
+
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover,
+input[type="submit"]:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(59,130,246,.4);
+}
+
+.resultado{
+    margin-top:25px;
+    padding:20px;
+
+    text-align:center;
+
+    background:rgba(59,130,246,.15);
+    border:1px solid rgba(59,130,246,.3);
+
+    border-radius:16px;
+}
+
+.resultado strong{
+    color:#60a5fa;
+    font-size:1.8rem;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:25px;
+    }
+}
+
+option {color:#0f172a
+
+}
